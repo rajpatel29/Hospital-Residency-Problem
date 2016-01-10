@@ -57,7 +57,7 @@ public class MainClass
 				
 		Collections.shuffle(resList);
 	
-		
+		//generates Hospital preference
 		for (int i = 0; i < n1; i++) 
 		{
 			Collections.shuffle(hosList);
@@ -77,6 +77,7 @@ public class MainClass
 			bw.newLine();
 		}
 		
+		//generates Resident preference
 		for (int i = 0; i < m1; i++) 
 		{
 			Collections.shuffle(resList);
@@ -104,6 +105,8 @@ public class MainClass
 		int tmp2 = 0;
 
 		
+		
+		//read input file
 		BufferedReader br = new BufferedReader(new FileReader(path));
 		String line = br.readLine();
 		StringTokenizer sto = new StringTokenizer(line);
@@ -224,6 +227,8 @@ public class MainClass
 		}
 		long startTime = System.currentTimeMillis();
 		
+		
+		//algorithm starts from here
 		while(!list.isEmpty())
 		{
 				while(!list.isEmpty())
@@ -297,6 +302,8 @@ public class MainClass
 					}
 				}
 		}
+		//algorithm ends here
+		
 		
 		long endTime = System.currentTimeMillis();
 		
@@ -313,6 +320,7 @@ public class MainClass
 //				bw1.newLine();
 //		}
 		bw1.close();
+		
 		System.out.println("Took "+(endTime - startTime) + " ms"); 			
 	}
 }	
